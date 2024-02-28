@@ -1,11 +1,11 @@
-import Image from "next/image";
+"use client"
+import { Navbar } from "@/components/Navbar";
 
 export default function Home() {
   return (
    <main>
-    <div className="bg-red-500">
-      Home Page
-    </div>
+    <Navbar/>
+    
    </main>
   );
 }
