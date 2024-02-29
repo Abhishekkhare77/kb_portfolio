@@ -7,7 +7,7 @@ import Image from "next/image";
 export function Navbar() {
     return (
         <div className="relative w-full flex items-center justify-between">
-            <NavbarMenu className="top-1" />
+            <NavbarMenu className="top-3 shadow-sm shadow-gray-500 text-gray-800 rounded-full" />
         </div>
     );
 }

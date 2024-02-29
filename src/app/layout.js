@@ -5,7 +5,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "KBTech",
-  description: "Transforming Your Dreams Into Digital Realities",
+  description: "Elevate Your Online Presence, Effortlessly.",
 };
 
 export default function RootLayout({ children }) {
