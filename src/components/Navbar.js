@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { HoveredLink, Menu, MenuItem, ProductItem } from "@/components/ui/navbar-menu";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
+import Link from "next/link";
 
 export function Navbar() {
     return (
@@ -20,12 +21,7 @@ function NavbarMenu({ className }) {
         >
             <Menu setActive={setActive}>
                 <div><Image src={"/logoKB.png"} height={100} width={100} alt="logo" className="invert w-16 h-16" /></div>
-                <MenuItem setActive={setActive} active={active} item="Home">
-                    <div className="flex flex-col space-y-4 text-sm">
-                        <HoveredLink href="/interface-design">Technologies</HoveredLink>
-                        <HoveredLink href="/interface-design">Testimonials</HoveredLink>
-                    </div>
-                </MenuItem>
+                <Link className="text-white hover:text-gray-100" href={'/'}>Home</Link>
                 <MenuItem setActive={setActive} active={active} item="Services">
                     <div className="flex flex-col space-y-4 text-sm">
                         <HoveredLink href="/web-dev">Web Development</HoveredLink>
@@ -58,14 +54,6 @@ function NavbarMenu({ className }) {
                             src=""
                             description="Respond to government RFPs, RFIs and RFQs 10x faster using AI"
                         />
-                    </div>
-                </MenuItem>
-                <MenuItem setActive={setActive} active={active} item="Pricing">
-                    <div className="flex flex-col space-y-4 text-sm">
-                        <HoveredLink href="/hobby">Hobby</HoveredLink>
-                        <HoveredLink href="/individual">Individual</HoveredLink>
-                        <HoveredLink href="/team">Team</HoveredLink>
-                        <HoveredLink href="/enterprise">Enterprise</HoveredLink>
                     </div>
                 </MenuItem>
             </Menu>

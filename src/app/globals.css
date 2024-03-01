@@ -1,3 +1,22 @@
+/* FILEPATH: /C:/Users/91905/Desktop/KBTech/kb_portfolio/src/app/globals.css */
+
+/* BEGIN: abpxx6d04wxr */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Custom Scrollbar Design */
+/* Add your own styles here */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: white;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #dfb9ff;
+}
+/* END: abpxx6d04wxr */

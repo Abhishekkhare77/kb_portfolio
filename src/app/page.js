@@ -3,12 +3,12 @@ import { Navbar } from "@/components/Navbar";
 import { ContainerScroll } from "@/components/ui/container-scroll-animation";
 import { Button } from "@/components/ui/moving-border";
 import { SparklesCore } from "@/components/ui/sparkles";
+import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 
 export default function Home() {
 
   return (
     <main>
-      <Navbar />
       <div className="h-[100vh] relative w-full bg-black flex flex-col items-center justify-center overflow-hidden rounded-md">
         <div className="w-full absolute inset-0 h-screen">
           <SparklesCore
@@ -61,7 +61,7 @@ export default function Home() {
                 <span className="absolute inset-0 rounded-full bg-[image:radial-gradient(75%_100%_at_50%_0%,rgba(56,189,248,0.6)_0%,rgba(56,189,248,0)_75%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100"></span>
               </span>
               <div className="relative flex space-x-2 items-center z-10 rounded-full bg-zinc-950 py-0.5 px-4 ring-1 ring-white/10 ">
-                <span>{`Services`}</span>
+                <span>{`See Works`}</span>
                 <svg
                   width="16"
                   height="16"
@@ -99,123 +99,87 @@ export default function Home() {
           }
         />
       </div>
+      <div className="flex flex-col items-center justify-center gap-5 ">
+        <h1 className="text-6xl font-bold text-center text-white relative z-20">
+          Why Choose Us?
+        </h1>
+        <div className="w-[40rem] h-40 relative">
+          {/* Gradients */}
+          <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-[2px] w-3/4 blur-sm" />
+          <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-px w-3/4" />
+          <div className="absolute inset-x-60 top-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-[5px] w-1/4 blur-sm" />
+          <div className="absolute inset-x-60 top-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-px w-1/4" />
+  
+          {/* Core component */}
+          <SparklesCore
+            background="transparent"
+            minSize={0.4}
+            maxSize={1}
+            particleDensity={1200}
+            className="w-full h-full"
+            particleColor="#FFFFFF"
+          />
+  
+          {/* Radial Gradient to prevent sharp edges */}
+          <div className="absolute inset-0 w-full h-full bg-black [mask-image:radial-gradient(350px_200px_at_top,transparent_20%,white)]"></div>
+        </div>
+        <div className="w-1/2">
+          <TextGenerateEffect words={"Choose KBTech for cutting-edge web and app development solutions that blend innovation, precision, and personalized service, ensuring your digital presence is powerful, user-friendly, and ahead of the curve."}/>
+        </div>
+      </div>    
     </main>
   );
 }
 
 export const users = [
   {
-    name: "Manu Arora",
-    designation: "Founder, Algochurn",
-    image: "https://picsum.photos/id/10/300/300",
-    badge: "Mentor",
+    name: "Social Media",
+    designation: "App / Website",
+    image: "/assets/socialMedia.webp",
   },
   {
-    name: "Sarah Singh",
-    designation: "Founder, Sarah's Kitchen",
-    image: "https://picsum.photos/id/11/300/300",
-    badge: "Mentor",
+    name: "Productivity",
+    designation: "App / Website",
+    image: "/assets/productivity.webp",
   },
   {
-    name: "John Doe",
-    designation: "Software Engineer, Tech Corp",
-    image: "https://picsum.photos/id/12/300/300",
-    badge: "Mentor",
+    name: "Entertainment",
+    designation: "App / Website",
+    image: "/assets/entertainment.webp",
   },
   {
-    name: "Jane Smith",
-    designation: "Product Manager, Innovate Inc",
-    image: "https://picsum.photos/id/13/300/300",
-    badge: "Mentor",
+    name: "Fitness",
+    designation: "App / Website",
+    image: "/assets/fitness.webp",
   },
   {
-    name: "Robert Johnson",
-    designation: "Data Scientist, DataWorks",
-    image: "https://picsum.photos/id/14/300/300",
-    badge: "Mentor",
+    name: "Education",
+    designation: "App / Website",
+    image: "/assets/education.webp",
   },
   {
-    name: "Emily Davis",
-    designation: "UX Designer, DesignHub",
-    image: "https://picsum.photos/id/15/300/300",
-    badge: "Mentor",
+    name: "Shopping",
+    designation: "App / Website",
+    image: "/assets/shopping.webp",
   },
   {
-    name: "Michael Miller",
-    designation: "CTO, FutureTech",
-    image: "https://picsum.photos/id/16/300/300",
-    badge: "Mentor",
+    name: "Finance",
+    designation: "App / Website",
+    image: "/assets/finance.webp",
   },
   {
-    name: "Sarah Brown",
-    designation: "CEO, StartUp",
-    image: "https://picsum.photos/id/17/300/300",
+    name: "Travel",
+    designation: "App / Website",
+    image: "/assets/travel.webp",
   },
   {
-    name: "James Wilson",
-    designation: "DevOps Engineer, CloudNet",
-    image: "https://picsum.photos/id/18/300/300",
-    badge: "Something",
+    name: "News",
+    designation: "App / Website",
+    image: "/assets/news.webp",
   },
   {
-    name: "Patricia Moore",
-    designation: "Marketing Manager, MarketGrowth",
-    image: "https://picsum.photos/id/19/300/300",
-    badge: "Mentor",
-  },
-  {
-    name: "Richard Taylor",
-    designation: "Frontend Developer, WebSolutions",
-    image: "https://picsum.photos/id/20/300/300",
-  },
-  {
-    name: "Linda Anderson",
-    designation: "Backend Developer, ServerSecure",
-    image: "https://picsum.photos/id/21/300/300",
-  },
-  {
-    name: "William Thomas",
-    designation: "Full Stack Developer, FullStack",
-    image: "https://picsum.photos/id/22/300/300",
-    badge: "Badger",
-  },
-  {
-    name: "Elizabeth Jackson",
-    designation: "Project Manager, ProManage",
-    image: "https://picsum.photos/id/23/300/300",
-    badge: "Mentor",
-  },
-  {
-    name: "David White",
-    designation: "Database Administrator, DataSafe",
-    image: "https://picsum.photos/id/24/300/300",
-    badge: "Advocate",
-  },
-  {
-    name: "Jennifer Harris",
-    designation: "Network Engineer, NetConnect",
-    image: "https://picsum.photos/id/25/300/300",
-  },
-  {
-    name: "Charles Clark",
-    designation: "Security Analyst, SecureIT",
-    image: "https://picsum.photos/id/26/300/300",
-  },
-  {
-    name: "Susan Lewis",
-    designation: "Systems Analyst, SysAnalyse",
-    image: "https://picsum.photos/id/27/300/300",
-  },
-  {
-    name: "Joseph Young",
-    designation: "Mobile Developer, AppDev",
-    image: "https://picsum.photos/id/28/300/300",
-    badge: "Mentor",
-  },
-  {
-    name: "Margaret Hall",
-    designation: "Quality Assurance, BugFree",
-    image: "https://picsum.photos/id/29/300/300",
-    badge: "Developer",
-  },
+    name: "Health",
+    designation: "App / Website",
+    image: "/assets/health.webp",
+  }
 ];
